@@ -3,3 +3,21 @@ layout: category
 permalink: /categories/notes
 title: Notes
 ---
+
+<h1>
+  {{ page.title }}
+</h1>
+{{ content }}
+<ul class="posts">
+  {% assign categories = page.categories | join: "-" %}
+  {% for post in site.posts %}
+    {% assign postCategories = post.categories | join: "-" %}
+    {% if categories == postCategories %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endif %}
+    
+  {% endfor %}
+
+</ul>

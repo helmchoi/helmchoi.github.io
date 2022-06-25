@@ -6,6 +6,7 @@ title: Notes
 ---
 
 <div id="archives">
+<h2>Most Recent Posts</h2>
 {% assign categories = page.categories | join: "-" %}
 {% for post in site.posts %}
   {% assign postCategories = post.categories | join: "-" %}

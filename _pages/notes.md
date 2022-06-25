@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /categories/notes
+permalink: /notes
 categories: Notes
 title: Notes
 ---

@@ -6,19 +6,13 @@ title: Notes
 ---
 
 <div id="archives">
-<h1>
-  {{ page.title }}
-</h1>
-{{ content }}
-<ul class="posts">
-  {% assign categories = page.categories | join: "-" %}
-  {% for post in site.posts %}
-    {% assign postCategories = post.categories | join: "-" %}
-    {% if categories == postCategories %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+{% assign categories = page.categories | join: "-" %}
+{% for post in site.posts %}
+  {% assign postCategories = post.categories | join: "-" %}
+  {% if categories == postCategories %}
+    <article class="archive-item">
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{% if post.title and post.title != "" %}{{post.title}}{% else %}{{post.excerpt |strip_html}}{%endif%}</a></h4>
+    </article>
+  {% endif %}
+{% endfor %}
 </div>

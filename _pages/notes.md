@@ -4,6 +4,7 @@ permalink: /categories/notes
 title: Notes
 ---
 
+<div id="archives">
 <h1>
   {{ page.title }}
 </h1>
@@ -17,7 +18,6 @@ title: Notes
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </li>
     {% endif %}
-    
   {% endfor %}
-
 </ul>
+</div>

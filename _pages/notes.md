@@ -1,6 +1,7 @@
 ---
 layout: category
 permalink: /categories/notes
+categories: Notes
 title: Notes
 ---
 

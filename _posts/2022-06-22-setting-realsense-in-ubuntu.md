@@ -6,17 +6,17 @@ categories: Notes
 
 Setting Realsense with ROS in Ubuntu 16.04, ROS Kinetic 
 
-1. Installing librealsense
+## 1. Installing librealsense
 follow
 https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
 [Note] if librealsense-ros to be installed, install dev/debug packages!
 
-2. Installing ROS Wrapper for Realsense
+## 2. Installing ROS Wrapper for Realsense
 follow (step 3~)
 https://github.com/IntelRealSense/realsense-ros
 
 [Possible Errors] after cmake..
-2-1) ddynamic-reconfigure
+### 2-1) ddynamic-reconfigure
 ```
 Could not find the required component 'ddynamic_reconfigure'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
 CMake Error at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
@@ -39,7 +39,7 @@ See also "/home/pmi/catkin_ws/build/CMakeFiles/CMakeOutput.log".
 See also "/home/pmi/catkin_ws/build/CMakeFiles/CMakeError.log".
 Invoking "cmake" failed
 ```
-==> Solution
+#### ==> Solution
 install ddynamic_reconfigure
 ```
 sudo apt install ros-kinetic-ddynamic-reconfigure
@@ -50,7 +50,7 @@ git clone https://github.com/pal-robotics/ddynamic_reconfigure.git
 ```
 
 
-2-2) librealsense2 not found error (although it is installed)
+### 2-2) librealsense2 not found error (although it is installed)
 ```
 CMake Warning at realsense-ros/realsense2_camera/CMakeLists.txt:44 (find_package):
   By not providing "Findrealsense2.cmake" in CMAKE_MODULE_PATH this project
@@ -76,12 +76,12 @@ CMake Error at realsense-ros/realsense2_camera/CMakeLists.txt:48 (message):
 
    Intel RealSense SDK 2.0 is missing, please install it from https://github.com/IntelRealSense/librealsense/releases
 ```
-==> Solution
+#### ==> Solution
 
 Install developer packages of librealsense (https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md)
 
 
-3. Pyrealsense2
+## 3. Pyrealsense2
 ```
 pip install pyrealsense2
 ```

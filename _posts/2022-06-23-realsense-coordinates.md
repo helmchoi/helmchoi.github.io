@@ -12,4 +12,4 @@ categories: Notes
 
 ### 2. Dimension
 image link:
-https://user-images.githubusercontent.com/41145062/56016784-47a13180-5cf5-11e9-839b-73d8612f9c32.png
+https://github.com/IntelRealSense/librealsense/issues/2718#issuecomment-482455273

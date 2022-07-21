@@ -9,4 +9,4 @@ comments: True
 ## Visual Odometry
 ```
 
-### 1. Fundamental Matrix $F$
+### 1. Fundamental Matrix $$F$$

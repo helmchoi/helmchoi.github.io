@@ -12,7 +12,7 @@ $x'=P'X, x=PX$
 
 $X=P^+ x + \lambda C$, where $PC=0$
 
-$l'=[e']_{\times} x'=[P'C]_{\times} (P'P^+ x)=[e']_{\times} PP'x=Fx$
+$l'=[e']_{\times} x' = [P'C]_{\times} (P'P^+ x) = [e']_{\times} PP'x = Fx$
 
 Since $x'^T l'=0$, $x'^TFx=0$.
 

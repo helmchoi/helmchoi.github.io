@@ -8,4 +8,6 @@ use_math: True
 ## Visual Odometry
 ```
 
-### 1. Fundamental Matrix $F$
+### 1. Fundamental Matrix F
+$x'=P'X, x=PX$
+$X=P^\dagger x + \lambda C$, where $PC=0$

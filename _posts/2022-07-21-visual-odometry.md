@@ -27,6 +27,8 @@ F&=[P'C]_{\times} P'P^+\\
 \end{align}
 $
 
+수식 왜이래
+
 ### 2. Essential Matrix $E$
 
 

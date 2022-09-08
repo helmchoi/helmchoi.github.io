@@ -13,6 +13,7 @@ First, set the wired connection IPv4 setting to manual
 - address: YOUR_IP.xx
 - netmask: 255.255.255.0
 - gateway: YOUR_IP.1
+
 where YOUR_IP is the first three numbers of your ip address (e.g., 192.168.0).
 For example - address: 192.168.0.11, gateway: 192.168.0.1
 
@@ -22,27 +23,31 @@ sudo gedit /etc/network/interfaces
 ```
 
 and add the following:
-
-  auto enp5s0
-  iface enp5s0 inet static
-  address YOUR_IP.xx
-  netmask 255.255.255.0
-  gateway YOUR_IP.1
-  dns-nameservers 168.126.63.1 8.8.8.8
+```
+auto ETHER_NAME
+iface ETHER_NAME inet static
+address YOUR_IP.xx
+netmask 255.255.255.0
+gateway YOUR_IP.1
+dns-nameservers 168.126.63.1 8.8.8.8
+```
+where ETHER_NAME is the name of the ethernet. It can be checked by the command
+`ip a`
 
 
 then the file looks like:
+```
+auto lo
+iface lo inet loopback
 
-  auto lo
-  iface lo inet loopback
 
-
-  auto enp5s0
-  iface enp5s0 inet static
-  address YOUR_IP.xx
-  netmask 255.255.255.0
-  gateway YOUR_IP.1
-  dns-nameservers 168.126.63.1 8.8.8.8
+auto enp5s0
+iface enp5s0 inet static
+address YOUR_IP.xx
+netmask 255.255.255.0
+gateway YOUR_IP.1
+dns-nameservers 168.126.63.1 8.8.8.8
+```
 
 Finally, save the file and restart the network.
 ```

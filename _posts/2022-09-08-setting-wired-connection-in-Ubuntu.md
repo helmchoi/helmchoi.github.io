@@ -45,9 +45,6 @@ and apply it.
 sudo netplan apply
 ```
 
-It works, but there are two wired networks 'netplan-enpxs0' (default) and 'Wired connection 1' and I don't know why.
-
-
 #### this method also worked at first, but after rebooting the network setting got wrong
 2) Open /etc/network/interfaces file by
 ```

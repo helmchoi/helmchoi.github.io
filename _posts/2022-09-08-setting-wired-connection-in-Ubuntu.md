@@ -23,7 +23,7 @@ Then open /etc/NetworkManager/NetworkManager.conf and revise to managed=true as:
 managed=true
 ```
 
-Open /etc/netplan/xx-network-manager-all.yaml to add the ethernet addresses (the file should look like below)
+1) Open /etc/netplan/xx-network-manager-all.yaml to add the ethernet addresses (the file should look like below)
 ```
 network:
   version: 2
@@ -42,9 +42,11 @@ and apply it.
 sudo netplan apply
 ```
 
+It works, but there are two wired networks 'netplan-enpxs0' (default) and 'Wired connection 1' and I don't know why.
+
 ---
 #### this method also worked at first, but after rebooting the network setting got wrong
-2) Then open /etc/network/interfaces file by
+2) Open /etc/network/interfaces file by
 ```
 sudo gedit /etc/network/interfaces
 ```

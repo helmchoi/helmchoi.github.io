@@ -17,6 +17,8 @@ First, set the wired connection IPv4 setting to manual
 where YOUR_IP is the first three numbers of your ip address (e.g., 192.168.0).
 For example - address: 192.168.0.100, gateway: 192.168.0.1
 
+---
+
 Then open /etc/network/interfaces file by
 ```
 sudo gedit /etc/network/interfaces
@@ -53,3 +55,4 @@ Finally, save the file and restart the network.
 ```
 sudo /etc/init.d/networking restart
 ```
+---

@@ -10,39 +10,39 @@ While reinstalling Ubuntu 18.04, I encountered the wired connection issue again.
 (wired connection status was 'connecting' at first)
 
 First, set the wired connection IPv4 setting to manual
-- address: 192.168.0.1
+- address: YOUR_IP.xx
 - netmask: 255.255.255.0
-- gateway: 192.168.0.1
+- gateway: YOUR_IP.1
+where YOUR_IP is the first three numbers of your ip address (e.g., 192.168.0).
+For example - address: 192.168.0.11, gateway: 192.168.0.1
 
 Then open /etc/network/interfaces file by
 ```
 sudo gedit /etc/network/interfaces
 ```
 
-and add the following
----------------------------------------
-auto enp5s0
-iface enp5s0 inet static
-address 147.46.112.93
-netmask 255.255.255.0
-gateway 147.46.112.1
-dns-nameservers 168.126.63.1 8.8.8.8
----------------------------------------
+and add the following:
+
+  auto enp5s0
+  iface enp5s0 inet static
+  address YOUR_IP.xx
+  netmask 255.255.255.0
+  gateway YOUR_IP.1
+  dns-nameservers 168.126.63.1 8.8.8.8
+
 
 then the file looks like:
----------------------------------------
-# interfaces(5) file used by ifup(8) and ifdown(8)
-auto lo
-iface lo inet loopback
+
+  auto lo
+  iface lo inet loopback
 
 
-auto enp5s0
-iface enp5s0 inet static
-address 147.46.112.93
-netmask 255.255.255.0
-gateway 147.46.112.1
-dns-nameservers 168.126.63.1 8.8.8.8
----------------------------------------
+  auto enp5s0
+  iface enp5s0 inet static
+  address YOUR_IP.xx
+  netmask 255.255.255.0
+  gateway YOUR_IP.1
+  dns-nameservers 168.126.63.1 8.8.8.8
 
 Finally, save the file and restart the network.
 ```

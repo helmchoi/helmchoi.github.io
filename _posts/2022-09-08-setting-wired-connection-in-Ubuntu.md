@@ -8,6 +8,7 @@ categories: Notes
 
 While reinstalling Ubuntu 18.04, I encountered the wired connection issue again.
 (wired connection status was 'connecting' at first)
+Note that I am installing Ubuntu on an external SSD for dual-booting with Windows.
 
 First, set the wired connection IPv4 setting to manual
 - address: YOUR_IP.xx
@@ -23,6 +24,8 @@ Then open /etc/NetworkManager/NetworkManager.conf and revise to managed=true as:
 managed=true
 ```
 
+---
+#### this works, but another wired connection 'netplan-ETHER_NAME' popped up & actually not required at all
 1) Open /etc/netplan/xx-network-manager-all.yaml to add the ethernet addresses (the file should look like below)
 ```
 network:
@@ -44,7 +47,7 @@ sudo netplan apply
 
 It works, but there are two wired networks 'netplan-enpxs0' (default) and 'Wired connection 1' and I don't know why.
 
----
+
 #### this method also worked at first, but after rebooting the network setting got wrong
 2) Open /etc/network/interfaces file by
 ```

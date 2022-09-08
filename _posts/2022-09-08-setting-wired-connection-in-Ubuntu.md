@@ -41,8 +41,8 @@ auto lo
 iface lo inet loopback
 
 
-auto enp5s0
-iface enp5s0 inet static
+auto ETHER_NAME
+iface ETHER_NAME inet static
 address YOUR_IP.xx
 netmask 255.255.255.0
 gateway YOUR_IP.1

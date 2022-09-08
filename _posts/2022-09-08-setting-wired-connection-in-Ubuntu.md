@@ -17,9 +17,34 @@ First, set the wired connection IPv4 setting to manual
 where YOUR_IP is the first three numbers of your ip address (e.g., 192.168.0).
 For example - address: 192.168.0.100, gateway: 192.168.0.1
 
----
+Then open /etc/NetworkManager/NetworkManager.conf and revise to managed=true as:
+```
+[ifupdown]
+managed=true
+```
 
-Then open /etc/network/interfaces file by
+Open /etc/netplan/xx-network-manager-all.yaml to add the ethernet addresses (the file should look like below)
+```
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ETHER_NAME:
+      dhcp4: no
+      addresses:
+        - YOUR_IP.xx/24
+      gateway4: YOUR_IP.xx.1
+      nameservers:
+        addresses: [8.8.8.8, 8.8.8.4]
+```
+and apply it.
+```
+sudo netplan apply
+```
+
+---
+#### this method also worked at first, but after rebooting the network setting got wrong
+2) Then open /etc/network/interfaces file by
 ```
 sudo gedit /etc/network/interfaces
 ```

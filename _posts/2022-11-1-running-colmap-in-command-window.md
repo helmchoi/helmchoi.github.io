@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  [Windows 10] Running COLMAP in a command window
+title:  Running COLMAP in a command window (Windows 10)
 categories: Notes
 ---
 

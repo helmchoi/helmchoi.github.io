@@ -26,3 +26,4 @@ colmap exhaustive_matcher --database_path PATH\database.db
 ```
 colmap point_triangulator --database_path PATH\database.db --image_path PATH\images --input_path PATH\sparse --output_path PATH\sparse
 ```
+The image name and the order is very important. The ordering of COLMAP may be different and error might appear.

@@ -24,6 +24,24 @@ colmap exhaustive_matcher --database_path PATH\database.db
 
 ## Point Triangulator
 ```
-colmap point_triangulator --database_path PATH\database.db --image_path PATH\images --input_path PATH\sparse --output_path PATH\sparse
+colmap point_triangulator --database_path PATH\database.db --image_path PATH\images --input_path PATH\sparse --output_path PATH\bin
 ```
-The image name and the order is very important. The ordering of COLMAP may be different and error might appear.
+
+## Saving the Model to txt
+Saves the model and export to text files (camera.txt, images.txt, points3D.txt).
+```
+colmap model_converter --input_path PATH\bin --output_path PATH --output_type TXT
+```
+
+## Dense Reconstruction
+### Image Undistortion
+```
+colmap image_undistorter --image_path PATH\images --input_path PATH\sparse --output_path PATH\dense
+```
+### Patch Match Stereo
+```
+colmap patch_match_stereo --workspace_path PATH
+```
+### Stereo Fusion
+```
+```

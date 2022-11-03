@@ -10,6 +10,7 @@ While reinstalling Ubuntu 18.04, I encountered the wired connection issue again.
 (wired connection status was 'connecting' at first)
 Note that I am installing Ubuntu on an external SSD for dual-booting with Windows.
 
+#### First Step
 First, set the wired connection IPv4 setting to manual
 - address: YOUR_IP.xx
 - netmask: 255.255.255.0
@@ -24,9 +25,8 @@ Then open /etc/NetworkManager/NetworkManager.conf and revise to managed=true as:
 managed=true
 ```
 
----
-#### this works, but another wired connection 'netplan-ETHER_NAME' popped up & actually not required at all
-1) Open /etc/netplan/xx-network-manager-all.yaml to add the ethernet addresses (the file should look like below)
+#### Second Step (another wired connection 'netplan-ETHER_NAME' popped up, but disappeared after a reboot)
+Open /etc/netplan/xx-network-manager-all.yaml to add the ethernet addresses (the file should look like below)
 ```
 network:
   version: 2
@@ -36,7 +36,7 @@ network:
       dhcp4: no
       addresses:
         - YOUR_IP.xx/24
-      gateway4: YOUR_IP.xx.1
+      gateway4: YOUR_IP.1
       nameservers:
         addresses: [8.8.8.8, 8.8.8.4]
 ```
@@ -45,8 +45,9 @@ and apply it.
 sudo netplan apply
 ```
 
-#### this method also worked at first, but after rebooting the network setting got wrong
-2) Open /etc/network/interfaces file by
+---
+#### this method worked at first, but after rebooting the network setting got wrong
+Open /etc/network/interfaces file by
 ```
 sudo gedit /etc/network/interfaces
 ```

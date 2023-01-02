@@ -27,3 +27,5 @@ catkin build cv_bridge
 source devel/setup.bash --extend
 ```
 (Referred to: https://velog.io/@openjr/ROS-Melodic-Python3-CvBridge-%EB%B9%8C%EB%93%9C)
+
+[CAUTION] Some changes have to be made on the repository to use it with OpenCV 4. Follow: https://github.com/ros-perception/vision_opencv/issues/272#issuecomment-471311300

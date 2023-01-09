@@ -4,7 +4,7 @@ title:  Installing COLMAP in Ubuntu (18.04)
 categories: Notes
 ---
 
-Follow instructions from https://colmap.github.io/install.html
+Follow instructions of https://colmap.github.io/install.html
 
 [Error] If colmap_exe related error occurs like
 ```

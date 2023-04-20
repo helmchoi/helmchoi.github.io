@@ -17,4 +17,4 @@ export PATH=$HOME/cmake-install/bin:$PATH
 export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH
 ```
 
-Reference: [https://github.com/colmap/colmap/issues/188#issuecomment-447265919](https://answers.ros.org/question/293119/how-can-i-updateremove-cmake-without-partially-deleting-my-ros-distribution/?answer=297523#post-id-297523)
+Reference: https://answers.ros.org/question/293119/how-can-i-updateremove-cmake-without-partially-deleting-my-ros-distribution/?answer=297523#post-id-297523

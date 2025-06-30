@@ -14,4 +14,4 @@ Troubleshooting:
 1) asio, cunit, etc. installation error (key exists)
    -> There would be registries left in "HKEY_LOCAL_MACHINE\SOFTWARE\Kitware\CMake\Packages". Remove them and retry.
 2) Failed to start process OR rclpy-related error
-   -> Python version mismatch. Don't trust the official guideline: the python version should match the version in the zip file (Lib/site-packages/), not 3.8.3.
+   -> Python version mismatch. Don't trust the official guideline: the python version should match the version in the zip file (Lib/site-packages/), not 3.8.3. Or could be done by using ROS2 version compiled with python 3.8.3 (e.g., Humble 20240807).
